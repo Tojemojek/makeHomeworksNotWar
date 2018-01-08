@@ -30,7 +30,6 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>${assertj.core}</version>
             <scope>test</scope>
         </dependency>
 
