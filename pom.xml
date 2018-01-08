@@ -14,7 +14,8 @@
 
     <modules>
         <module>dziedziczeniejpa</module>
-        <module>sprinbeans</module>
+        <module>springbeans</module>
+        <module>przekazywaniewartosci</module>
     </modules>
 
     <parent>
@@ -92,10 +93,6 @@
             <version>${assertj.core}</version>
             <scope>test</scope>
         </dependency>
-
-
-
-
 
 
     </dependencies>
