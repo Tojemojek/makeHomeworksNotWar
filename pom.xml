@@ -16,6 +16,7 @@
         <module>dziedziczeniejpa</module>
         <module>springbeans</module>
         <module>przekazywaniewartosci</module>
+        <module>kalkulatorczasu</module>
     </modules>
 
     <parent>

@@ -21,6 +21,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DataJpaTest
 public class AdminRepositoryTest {
 
+
+    //todo znaleźć w testach jak nie robić rollback
     Logger LOG = LoggerFactory.getLogger(AdminRepositoryTest.class);
 
     @Autowired
@@ -61,7 +63,7 @@ public class AdminRepositoryTest {
 //        assertThat(admin.getDateOfCreation()).isNull();
 //        assertThat(admin.getDateOfUpdate()).isNull();
 
-        adminRepository.save(admin);
+        adminRepository.saveAndFlush(admin);
 
         LOG.debug(admin.getId());
         LOG.debug(admin.getDateOfCreation());
@@ -70,7 +72,7 @@ public class AdminRepositoryTest {
 
         fromRepository.setSurname("Inne Nazwisko");
 
-        adminRepository.save(fromRepository);
+        adminRepository.saveAndFlush(fromRepository);
 //
 //        assertThat(fromRepository.getId()).isNotNull();
 //        assertThat(fromRepository.getDateOfCreation()).isNotNull();

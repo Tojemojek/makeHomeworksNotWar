@@ -35,11 +35,16 @@ class Swapper {
     private final static Logger LOG = LoggerFactory.getLogger(Swapper.class);
 
     public void swap(TestClass a, TestClass b) {
+
         TestClass temp;
 
         LOG.info("Przed zmianą wewnątrz swappera");
         LOG.info("A " + a.value);
         LOG.info("B " + b.value);
+
+        a.value = "Czerwony";
+
+        a = new TestClass();
 
         temp = a;
         a = b;
