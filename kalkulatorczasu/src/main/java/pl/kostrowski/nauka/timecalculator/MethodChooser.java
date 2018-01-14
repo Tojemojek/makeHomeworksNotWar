@@ -26,8 +26,10 @@ public class MethodChooser {
                 LOG.info("Podaj drugą datę");
                 String secondDate = sc.nextLine();
                 Optional<Period> dateDifference = tc.getDateDifference(firstDate, secondDate);
-                dateDifference.ifPresent(dd -> LOG.warn("Różnica między datami wynosi"));
-                dateDifference.ifPresent(dd -> LOG.warn("Lata: " + dd.getYears() + " miesiące: " + dd.getMonths() + " dni: " + dd.getDays()));
+                dateDifference.ifPresent(dd -> {
+                    LOG.warn("Różnica między datami wynosi");
+                    LOG.warn("Lata: " + dd.getYears() + " miesiące: " + dd.getMonths() + " dni: " + dd.getDays());
+                });
                 break;
             }
 
@@ -39,8 +41,10 @@ public class MethodChooser {
                 LOG.info("Podaj drugi czas");
                 String secondTime = sc.nextLine();
                 Optional<LocalTime> timeDifference = tc.getTimeDifference(firstTime, secondTime);
-                timeDifference.ifPresent(td -> LOG.warn("Różnica między godzinami wynosi"));
-                timeDifference.ifPresent(td -> LOG.warn("Godziny: " + td.getHour() + " minuty: " + td.getMinute() + " sekundy: " + td.getSecond()));
+                timeDifference.ifPresent(td -> {
+                    LOG.warn("Różnica między godzinami wynosi");
+                    LOG.warn("Godziny: " + td.getHour() + " minuty: " + td.getMinute() + " sekundy: " + td.getSecond());
+                });
                 break;
 
             }
