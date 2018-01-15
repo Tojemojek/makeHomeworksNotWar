@@ -17,6 +17,7 @@
         <module>springbeans</module>
         <module>przekazywaniewartosci</module>
         <module>kalkulatorczasu</module>
+        <module>timecalculator</module>
     </modules>
 
     <parent>
